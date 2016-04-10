@@ -1,0 +1,50 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+/** Navbar **/
+
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+/** Form **/
+.content {
+	padding-top: 80px;
+}
+
+@media (max-width: 978px) {
+    .content {
+        padding-top: 110px;
+    }
+}
+
+.panel-primary {
+	width:80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+.form-group .col-sm-4 {
+	margin-top: 20px;
+}
+
+.form-group .col-sm-3 {
+	margin-top: 30px;
+	margin-right: 50px;
+}
+
+.panel-footer {
+	padding-right: 20px;
+}

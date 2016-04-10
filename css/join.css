@@ -1,0 +1,99 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+/** Navbar **/
+
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+
+/**Header**/
+
+#join-trips {
+    margin: 5px 5px;
+}
+
+.content {
+    padding-top: 80px;
+}
+
+
+@media (max-width: 978px) {
+    .content {
+        padding-top: 110px;
+    }
+}
+
+.sort {
+    background: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 4px;
+}
+
+.trip-box {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: #e5e5e5 #dbdbdb #d2d2d2;
+    padding: 0px 10px 10px 10px;
+    color: black;
+    margin-bottom: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+
+.title-info {
+    vertical-align: middle;
+}
+
+.trip-details {
+    opacity: 0.6;
+    padding-bottom: 10px;
+}
+
+.title > h3 {
+    margin-top: 10px;
+}
+
+.attractions-description {
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    vertical-align: middle;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tr-on-hover:hover > img {
+    opacity: 0.2;
+}
+
+.attractions-description:hover {
+    opacity: 1.0;
+}

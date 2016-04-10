@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/itinerary.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+
+
+    <script src="function.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" href="build/css/countrySelect.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Velle</a>
+            </div>
+            <div class="nav navbar-nav navbar-right cty">
+                <input id="country_selector" type="text">
+            </div>
+        </div>
+    </nav>
+    <h1> Organise Your Plans Here!</h1>
+    <div class="container">
+        <div class="col-xs-3 ">
+            <!--Sidebar content-->
+            <div class="buttons">
+                <a type="button" class="btn btn-success btn-block" href="planning.html">Publish plan</a>
+                <br>
+            </div>
+            <div class="options">
+                <a data-toggle="modal" data-target="#Attractions"><span class="glyphicon glyphicon-star"></span>Attractions</a>
+                <br>
+                <a data-toggle="modal" data-target="#Accomodation"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+                <br>
+                <a data-toggle="modal" data-target="#Food"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
+                <br>
+            </div>
+            <div class="details">
+                <h4><center>Click on any of the desired icon</center></h4>
+                <ul>
+                    <li> <b>Attractions</b>
+                        <br> Select from a variety of local <b>attractions</b> and add them to plan</li>
+                    <li> <b>Accomodation</b>
+                        <br> Select your desired <b>acccomdation</b> and add them to plan </li>
+                    <li> <b>Food</b>
+                        <br> Select your choice of local <b>food</b></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--Modal content-->
+
+        <div class="modal fade" id="Attractions" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <select>
+                            <option value="Day1">Day 1</option>
+                            <option value="Day2">Day 2</option>
+                            <option value="Day3">Day 3</option>
+                            <option value="Day4">Day 4</option>
+                        </select>
+                        <h4 class="modal-title"><center>Attractions</center></h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-12">
+                            <h4> Featured Attraction Of The Day</h4>
+                            <img src="img/attractions/bigben1.jpg">
+                            <p>
+                                <ul>
+                                    <li> Big Ben </li>
+                                    <li> Great Bell of London </li>
+                                    <li> Free Entrance </li>
+                                </ul>
+                            </p>
+
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/attractions/attraction1.jpg" >
+                            <p>
+                                <ul>
+                                    <li> London Ferris Wheel </li>
+                                    <li> Amazing bird's eye view of London </li>
+                                    <li> SGD 40 per pax </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/attractions/attraction2.jpg" >
+                            <p>
+                                <ul>
+                                    <li> Royal Palace </li>
+                                    <li> Explore the century old palac </li>
+                                    <li> Free Entrance </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/attractions/attraction3.jpg">
+                            <p>
+                                <ul>
+                                    <li> Old Supreme Court </li>
+                                    <li> UNESCO Heritage Site </li>
+                                    <li> Free Entrance </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/attractions/attraction4.jpg">
+                            <p>
+                                <ul>
+                                    <li> Hamming Way Muesum </li>
+                                    <li> UNESCO Heritage Site </li>
+                                    <li> Free Entrance </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/attractions/attraction5.jpg">
+                            <p>
+                                <ul>
+                                    <li> RiverSide Quay </li>
+                                    <li> Paddle across London river </li>
+                                    <li> SGD 30/hr </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/attractions/attraction6.jpg">
+                            <p>
+                                <ul>
+                                    <li> Prince George Castle </li>
+                                    <li> Explore the filming site of Rapunzel </li>
+                                    <li> Free Entrance </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success right" data-dismiss="modal">Add to Plan</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="Accomodation" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="col-sm-2">
+                            <select class="form-control">
+                                <option value="Day1">Day 1</option>
+                                <option value="Day2">Day 2</option>
+                                <option value="Day3">Day 3</option>
+                                <option value="Day4">Day 4</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3 class="modal-title text-center"><strong>Accomodation</strong></h3>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-12">
+                            <h4> Featured Accomodation Of The Day</h4>
+                            <img src="img/accomodation/LondonHotel.jpg" width="830" height="333">
+                            <p>
+                                <ul>
+                                    <li> London Hotel </li>
+                                    <li> Situated in the hub of the city </li>
+                                    <li> Rates starting from SGD 350 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/accomodation/hotel1.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Tomsbury Hotel </li>
+                                    <li> Beside Stamford Station </li>
+                                    <li> Rates starting from SGD 150 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/accomodation/hotel2.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Knightsbridge Inn </li>
+                                    <li> Opposite London Ferris Wheel </li>
+                                    <li> Rates starting from SGD 150 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/accomodation/hotel3.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> The Humming Bird </li>
+                                    <li> Beside London Bird Park </li>
+                                    <li> Rates starting from SGD 200 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/accomodation/hotel4.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Hitlon Hotel </li>
+                                    <li>Beside Stamford Station </li>
+                                    <li> Rates starting from SGD 300 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/accomodation/hotel5.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Charlton Hotel and Spa </li>
+                                    <li> Opposite Charlton Football Stadium</li>
+                                    <li> Rates starting from SGD 280 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/accomodation/hotel6.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Hotel Cannovaro </li>
+                                    <li> Five minutes walk from Stamford Stadium </li>
+                                    <li> Rates starting from SGD 400 / Night onwards </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success right" data-dismiss="modal">Add to Plan</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="Food" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <select>
+                            <option value="Day1">Day 1</option>
+                            <option value="Day2">Day 2</option>
+                            <option value="Day3">Day 3</option>
+                            <option value="Day4">Day 4</option>
+                        </select>
+                        <h4 class="modal-title"><center>Food</center></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-12">
+                            <h4> Featured Dining Place Of The Day</h4>
+                            <img class="img-responsive" src="img/food/burgers.jpg" width="830" height="333">
+                            <p>
+                                <ul>
+                                    <li> The Butchers </li>
+                                    <li> Butter Crab, Baked Prawns etc. </li>
+                                    <li> SGD 30++ / set </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/food/food1.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> King's Salmon </li>
+                                    <li> Pan-seared Lemon Herb Salmon etc. </li>
+                                    <li> SGD 15++ / set </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/food/food2.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Robert's Stew </li>
+                                    <li> Lamb Stew , Chicken Stew etc. </li>
+                                    <li> SGD 12++ / bowl </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/food/food3.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Jamie's Sweet Tooth </li>
+                                    <li> Red Velvet Macroons , Mint Waffles etc. </li>
+                                    <li> SGD 18++ / set </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/food/food4.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Waffletown </li>
+                                    <li> Soft serve ice cream waffles etc</li>
+                                    <li> SGD 10++ / waffle </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/food/food5.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Cafe London </li>
+                                    <li> Homemade cakes </li>
+                                    <li> SGD 9++ / slice </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="img/food/food6.jpg" width="250" height="200">
+                            <p>
+                                <ul>
+                                    <li> Chippy Fish </li>
+                                    <li> Chef's special Fish and Chips </li>
+                                    <li> SGD 18++ / set </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success right" data-dismiss="modal">Add to Plan</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!--Body content-->
+
+        <div class="col-md-3">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Day 1</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>0800</p> Breakfast @ </li>
+                            <li class="list-group-item">
+                                <p>0900</p> Churchill War Rooms </li>
+                            <li class="list-group-item">
+                                <p>1130</p> Lunch @ Casse-Croûte </li>
+                            <li class="list-group-item">
+                                <p>1300</p> Hampton Court Palace </li>
+                            <li class="list-group-item">
+                                <p>1500</p> Tate Modern </li>
+                            <li class="list-group-item">
+                                <p>1800</p> Dinner @ Burger & Lobsters </li>
+                            <li class="list-group-item">
+                                <p>2000</p> Tower Bridge </li>
+                            <li class="list-group-item list-group-item-danger">
+                                <p>2200</p> Accomodation @ Hilton Hotel [<a href="#">UNBOOKED</a>] </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Day 2</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>0800</p> Breakfast @ </li>
+                            <li class="list-group-item">
+                                <p>0900</p> Churchill War Rooms </li>
+                            <li class="list-group-item">
+                                <p>1130</p> Lunch @ Casse-Croûte </li>
+                            <li class="list-group-item">
+                                <p>1300</p> Hampton Court Palace </li>
+                            <li class="list-group-item">
+                                <p>1500</p> Tate Modern </li>
+                            <li class="list-group-item">
+                                <p>1800</p> Dinner @ Burger & Lobsters </li>
+                            <li class="list-group-item">
+                                <p>2000</p> Tower Bridge </li>
+                            <li class="list-group-item list-group-item-success">
+                                <p>2200</p> Accomodation @ Hampshire [BOOKED] </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Day 3</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>0800</p> Breakfast @ </li>
+                            <li class="list-group-item">
+                                <p>0900</p> Churchill War Rooms </li>
+                            <li class="list-group-item">
+                                <p>1130</p> Lunch @ Casse-Croûte </li>
+                            <li class="list-group-item">
+                                <p>1300</p> Hampton Court Palace </li>
+                            <li class="list-group-item">
+                                <p>1500</p> Tate Modern </li>
+                            <li class="list-group-item">
+                                <p>1800</p> Dinner @ Burger & Lobsters </li>
+                            <li class="list-group-item">
+                                <p>2000</p> Tower Bridge </li>
+                            <li class="list-group-item list-group-item-danger">
+                                <p>2200</p> Accomodation @ St Paul's Hotel [<a href="#">UNBOOKED</a>] </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+
+
+
+    </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Form Helpers -->
+    <script src="build/js/countrySelect.min.js"></script>
+    <script>
+        $("#country_selector").countrySelect({
+            preferredCountries: ['sg', 'us', 'gb']
+        });
+    </script>
+
+    <!--<script src="js/landing-page.js"></script>-->
+    <script>
+        $("img").on("click",
+            function() {
+                $(this).toggleClass("imgActive");
+            });
+    </script>
+
+
+
+
+</body>
+
+</html>
