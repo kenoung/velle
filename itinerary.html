@@ -49,7 +49,7 @@
         <div class="col-xs-3 ">
             <!--Sidebar content-->
             <div class="buttons">
-                <a type="button" class="btn btn-success btn-block" href="planning.html">Publish plan</a>
+                <a type="button" class="btn btn-success btn-success-1 btn-block" href="planning.html">Publish plan</a>
                 <br>
             </div>
             <div class="options">
@@ -83,13 +83,17 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <select>
-                            <option value="Day1">Day 1</option>
-                            <option value="Day2">Day 2</option>
-                            <option value="Day3">Day 3</option>
-                            <option value="Day4">Day 4</option>
-                        </select>
-                        <h4 class="modal-title"><center>Attractions</center></h4>
+                        <div class="col-sm-2">
+                            <select class="form-control">
+                                <option value="Day1">Day 1</option>
+                                <option value="Day2">Day 2</option>
+                                <option value="Day3">Day 3</option>
+                                <option value="Day4">Day 4</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3 class="modal-title text-center"><strong>Attractions</strong></h3>
+                        </div>
 
                     </div>
                     <div class="modal-body">
@@ -106,7 +110,7 @@
 
                         </div>
                         <div class="col-xs-4">
-                            <img src="img/attractions/attraction1.jpg" >
+                            <img src="img/attractions/attraction1.jpg">
                             <p>
                                 <ul>
                                     <li> London Ferris Wheel </li>
@@ -116,7 +120,7 @@
                             </p>
                         </div>
                         <div class="col-xs-4">
-                            <img src="img/attractions/attraction2.jpg" >
+                            <img src="img/attractions/attraction2.jpg">
                             <p>
                                 <ul>
                                     <li> Royal Palace </li>
@@ -282,13 +286,17 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <select>
-                            <option value="Day1">Day 1</option>
-                            <option value="Day2">Day 2</option>
-                            <option value="Day3">Day 3</option>
-                            <option value="Day4">Day 4</option>
-                        </select>
-                        <h4 class="modal-title"><center>Food</center></h4>
+                        <div class="col-sm-2">
+                            <select class="form-control">
+                                <option value="Day1">Day 1</option>
+                                <option value="Day2">Day 2</option>
+                                <option value="Day3">Day 3</option>
+                                <option value="Day4">Day 4</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3 class="modal-title text-center"><strong>Food</strong></h3>
+                        </div>
                     </div>
                     <div class="modal-body">
                         <div class="col-xs-12">
@@ -371,6 +379,137 @@
             </div>
         </div>
 
+        <!--Booking Modals-->
+
+        <div class="modal fade" id="BookingHilton" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
+                                <table class="table table-hover table-condensed">
+                                    <tr>
+                                        <td width="40%"><strong>Hotel Name</strong></td>
+                                        <td width="60%">Hilton Hotel London</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Room Type</strong></td>
+                                        <td>Deluxe Single</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Amenities</strong></td>
+                                        <td>Breakfast & WiFi included</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Check-in Date</strong></td>
+                                        <td>22 Apr 2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Check-out Date</strong></td>
+                                        <td>23 Apr 2016</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form role="form">
+                                <div class="form-group col-sm-8 col-sm-offset-2">
+                                    <h4 class="text-center"><strong>Step 2 </strong> Select Your Payment Method</h4>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio"><strong>Primary Credit Card </strong>
+                                            <p class="text-muted">Registered to Jin Wei | Ending in 1403</p>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio"><strong>Paypal</strong>
+                                            <p class="text-muted">Registered to jinwei@hotmail.com</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="BookingPaul" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
+                                <table class="table table-hover table-condensed">
+                                    <tr>
+                                        <td width="40%"><strong>Hotel Name</strong></td>
+                                        <td width="60%">St. Paul's Hotel London</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Room Type</strong></td>
+                                        <td>Deluxe Single</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Amenities</strong></td>
+                                        <td>Breakfast included</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Check-in Date</strong></td>
+                                        <td>24 Apr 2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Check-out Date</strong></td>
+                                        <td>25 Apr 2016</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form role="form">
+                                <div class="form-group col-sm-8 col-sm-offset-2">
+                                    <h4 class="text-center"><strong>Step 2 </strong> Select Your Payment Method</h4>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio"><strong>Primary Credit Card </strong>
+                                            <p class="text-muted">Registered to Jin Wei | Ending in 1403</p>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio"><strong>Paypal</strong>
+                                            <p class="text-muted">Registered to jinwei@hotmail.com</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--End Booking Modals-->
 
 
         <!--Body content-->
@@ -396,7 +535,12 @@
                             <li class="list-group-item">
                                 <p>2000</p> Tower Bridge </li>
                             <li class="list-group-item list-group-item-danger">
-                                <p>2200</p> Accomodation @ Hilton Hotel [<a href="#">UNBOOKED</a>] </li>
+                                <p>2200</p>
+                                <p>Accomodation @ Hilton Hotel</p>
+                                <p>
+                                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingHilton">Book Now</button>
+                                </p>
+                            </li>
                         </ul>
 
                     </div>
@@ -426,8 +570,13 @@
                                 <p>1800</p> Dinner @ Burger & Lobsters </li>
                             <li class="list-group-item">
                                 <p>2000</p> Tower Bridge </li>
-                            <li class="list-group-item list-group-item-success">
-                                <p>2200</p> Accomodation @ Hampshire [BOOKED] </li>
+                            <li class="list-group-item list-group-item-danger">
+                                <p>2200</p>
+                                <p>Accomodation @ Hampshire</p>
+                                <p>
+                                    <button class="btn btn-success disabled">Booked</button>
+                                </p>
+                            </li>
                         </ul>
 
                     </div>
@@ -456,7 +605,12 @@
                             <li class="list-group-item">
                                 <p>2000</p> Tower Bridge </li>
                             <li class="list-group-item list-group-item-danger">
-                                <p>2200</p> Accomodation @ St Paul's Hotel [<a href="#">UNBOOKED</a>] </li>
+                                <p>2200</p>
+                                <p>Accomodation @ St. Paul's Hotel</p>
+                                <p>
+                                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingPaul">Book Now</button>
+                                </p>
+                            </li>
                         </ul>
 
                     </div>
