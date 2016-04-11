@@ -15,11 +15,12 @@ h1{
     margin-left:10px;
 }
 .details{
-    margin-top: 30px;
+    margin-top: 20px;
     border:2px solid black;
     border-radius: 5px;
     margin-left:10px;
     color:black;
+    padding: 5px 20px 15px 15px;
 
 }
 .options{
