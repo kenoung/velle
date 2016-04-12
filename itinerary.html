@@ -3,8 +3,9 @@
 <html>
 
 <head>
-    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/bootstrap-tour-standalone.min.css" rel="stylesheet">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -16,18 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 
-
-
     <script src="function.js"></script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-
+    <script src="js/bootstrap-tour-standalone.min.js"></script>
     <link rel="stylesheet" href="build/css/countrySelect.css">
 
 </head>
@@ -49,7 +45,8 @@
         <div class="col-xs-3 ">
             <!--Sidebar content-->
             <div class="buttons">
-                <a type="button" class="btn btn-success btn-success-1 btn-block" href="planning.html">Publish plan</a><br>
+                <a type="button" class="btn btn-success btn-success-1 btn-block" href="planning.html">Publish plan</a>
+                <br>
             </div>
             <div class="options">
                 <a data-toggle="modal" data-target="#Attractions"><span class="glyphicon glyphicon-star"></span>Attractions</a>
@@ -60,13 +57,13 @@
                 <br>
             </div>
             <div class="details text-justify">
-                <h4>Click on any of the icons above</h4>
+                <h4 id="test">Click on any of the icons above</h4>
                 <p><b>Attractions</b>
-                <br> Select from a variety of local attractions and add them to plan</p>
+                    <br> Select from a variety of local attractions and add them to plan</p>
                 <p><b>Accomodation</b>
-                <br> Select your desired acccomdation and add them to plan</p>
+                    <br> Select your desired acccomdation and add them to plan</p>
                 <p><b>Food</b>
-                <br> Select your choice of local food</p>
+                    <br> Select your choice of local food</p>
             </div>
 
         </div>
@@ -93,7 +90,7 @@
                         </div>
 
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body bigben">
                         <div class="col-xs-12 tr-on-hover clickme">
                             <img src="img/attractions/bigben1.jpg">
                             <span class="more-info">
@@ -103,7 +100,8 @@
                                     Free Entrance
                                 </p>
                             </span>
-                            <p><h4><center><b>Big Ben</b></center></h4></p>
+                            <p>
+                                <h4><center><b>Big Ben</b></center></h4></p>
 
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
@@ -115,7 +113,9 @@
                                     <li> SGD 40 / pax</li>
                                 </ul>
                             </span>
-                            <p><center><b>London Ferris Wheel</b></center></p>
+                            <p>
+                                <center><b>London Ferris Wheel</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/attractions/attraction2.jpg">
@@ -126,7 +126,9 @@
                                     <li> Free Entrance </li>
                                 </ul>
                             </span>
-                            <p><center><b>Buckingdam Palace</b></center></p>
+                            <p>
+                                <center><b>Buckingdam Palace</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/attractions/attraction3.jpg">
@@ -137,7 +139,9 @@
                                     <li> Free Entrance </li>
                                 </ul>
                             </span>
-                            <p><center><b>Old Supreme Court</b></center></p>
+                            <p>
+                                <center><b>Old Supreme Court</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/attractions/attraction4.jpg">
@@ -148,7 +152,9 @@
                                     <li> Free Entrance </li>
                                 </ul>
                             </span>
-                            <p><center><b>Hamming Way Museum</b></center></p>
+                            <p>
+                                <center><b>Hamming Way Museum</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/attractions/attraction5.jpg">
@@ -159,7 +165,9 @@
                                     <li> SGD 30/hr </li>
                                 </ul>
                             </span>
-                            <p><center><b>Riverside Quay</b></center></p>
+                            <p>
+                                <center><b>Riverside Quay</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/attractions/attraction6.jpg">
@@ -170,7 +178,9 @@
                                     <li> Free Entrance </li>
                                 </ul>
                             </span>
-                            <p><center><b>Prince George's Castle</b></center></p>
+                            <p>
+                                <center><b>Prince George's Castle</b></center>
+                            </p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -207,78 +217,91 @@
                                 <h3><center><strong>Featured Accomodation</strong></center></h3>
                                 <p class="lead text-center">
                                     Situated in the hub of the city<br>
+                                    Rates starting from SGD 350 / Night 
                                 </p>
                             </span>
-                            <ul>
-                                <li> London Hotel </li>
-                                <li> Rates starting from SGD 350 / Night </li>
-                            </ul>
+                            <p>
+                                <center><b>London Hotel</b></center>
+                            </p>
+
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel1.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Accomodation Details</strong></center></h4>
-                                <p><center>Beside Stamford Station</center></p>
+                                <ul>
+                                    <li>Beside Stamford Station</li>
+                                    <li> Rates starting from SGD 150 / Night </li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Tomsbury Hotel </li>
-                                <li> Rates starting from SGD 150 / Night </li>
-                            </ul>
+                            <p>
+                                <center><b>Tombsury Hotel</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel2.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Accomodation Details</strong></center></h4>
-                                <p><center>Oppostie London Ferris Wheel</center></p>
+                                <ul>
+                                    <li> Oppostie London Ferris Wheel </li>
+                                    <li> Rates starting from SGD 150 / Night </li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Knightsbridge Inn </li>
-                                <li> Rates starting from SGD 150 / Night </li>
-                            </ul>
+                            <p>
+                                <center><b>Knightsbridge Inn</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel3.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Accomodation Details</strong></center></h4>
-                                <p><center>Beside London Bird Park</center></p>
+                                <ul>
+                                    <li> Beside London Bird Park</li>
+                                    <li> Rates starting from SGD 200 / Night</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> The Humming Bird </li>
-                                <li> Rates starting from SGD 200 / Night</li>
-                            </ul>
+                            <p>
+                                <center><b>The Humming Bird</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel4.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Accomodation Details</strong></center></h4>
-                                <p><center>Beside Stamford Station</center></p>
+                                <ul>
+                                    <li> Beside Stamford Station</li>
+                                    <li> Rates starting from SGD 150 / Night</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Hitlon Hotel </li>
-                                <li> Rates starting from SGD 300 / Night onwards </li>
-                            </ul>
+                            <p>
+                                <center><b>Stamford Hotel</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel5.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Accomodation Details</strong></center></h4>
-                                <p><center>Oppostie Charlton Football Stadium</center></p>
+                                <ul>
+                                    <li> Opposite Charlton Football Stadium </li>
+                                    <li> Rates starting from SGD 280 / Night onwards</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Charlton Hotel and Spa </li>
-                                <li> Rates starting from SGD 280 / Night onwards </li>
-                            </ul>
+                            <p>
+                                <center><b>Charlton Hotel and Spa</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel6.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Accomodation Details</strong></center></h4>
-                                <p><center>Five minutes walk from Stamford Stadium</center></p>
+                                <ul>
+                                    <li> Five minutes walk from Stamford Station </li>
+                                    <li> Rates starting from SGD 400 / Night</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Hotel Cannovaro </li>
-                                <li> Rates starting from SGD 400 / Night onwards </li>
-                            </ul>
+                            <p>
+                                <center><b>Hotel Cannavaro</b></center>
+                            </p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -316,79 +339,90 @@
                                 <h3><center><strong>Featured Diner</strong></center></h3>
                                 <p class="lead text-center">
                                     Butter Crab, Baked Prawns etc.</br>
+                                    SGD 30++ / set
                                 </p>
                             </span>
-                            <ul>
-                                <li>The Butchers</li>
-                                <li>SGD 30++ / set</li>
-                            </ul>
+                            <p>
+                                <center><b>The Butchers</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/food/food1.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Food Details</strong></center></h4>
-                                <p><center>Pan-seared Lemon Herb Salmon etc.</center></p>
+                                <ul>
+                                    <li> Pan-seared Lemon Herb Salmon etc. </li>
+                                    <li> SGD 15++ / set</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> King's Salmon </li>
-                                <li> SGD 15++ / set </li>
-                            </ul>
+                            <p>
+                                <center><b>King's Salmon</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/food/food2.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Food Details</strong></center></h4>
-                                <p><center>Lamb Stew, Chicken Stew etc. </center></p>
+                                <ul>
+                                    <li> Lamb Stew, Chicken Stew etc. </li>
+                                    <li> SGD 12++ / set</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Robert's Stew </li>
-                                <li> SGD 12++ / bowl </li>
-                            </ul>
+                            <p>
+                                <center><b>Robert's Stew</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/food/food3.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Food Details</strong></center></h4>
-                                <p><center>Red Velvet Macroons , Mint Waffles etc.</center></p>
+                                <ul>
+                                    <li> Red Velvet Macroons , Mint Waffles etc.</li>
+                                    <li> SGD 18++ / set</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Jamie's Sweet Tooth </li>
-                                <li> SGD 18++ / set </li>
-                            </ul>
+                            <p>
+                                <center><b>Jamie's Sweet Tooth</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/food/food4.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Food Details</strong></center></h4>
-                                <p><center>Soft serve ice cream waffles etc.</center></p>
+                                <ul>
+                                    <li> Soft serve ice cream waffles etc.</li>
+                                    <li> SGD 10++ / set</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Waffletown </li>
-                                <li> SGD 10 ++ / waffle</li>
-                            </ul>
+                            <p>
+                                <center><b>Waffletown</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/food/food5.jpg" width="250" height="200">
                             <span class="more-info">
                                 <h4><center><strong>Food Details</strong></center></h4>
-                                <p><center>Freshly baked cakes with household recipe</center></p>
+                                <ul>
+                                    <li> Freshly baked cakes </li>
+                                    <li> SGD 9++ / slice</li>
+                                </ul>
                             </span>
-                            <ul>
-                                <li> Cafe London </li>
-                                <li> Homemade cakes </li>
-                                <li> SGD 9++ / slice </li>
-                            </ul>
+                            <p>
+                                <center><b>Cafe London</b></center>
+                            </p>
                         </div>
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/food/food6.jpg" width="250" height="200">
                             <span class="more-info">
-                                <h4><center><strong>Attraction Details</strong></center></h4>
+                                <h4><center><strong>Food Details</strong></center></h4>
                                 <ul>
-                                    <li> Chippy Fish </li>
-                                    <li> Chef's special Fish and Chips </li>
-                                    <li> SGD 18++ / set </li>
+                                    <li> Chef's special Fish and Chips etc.</li>
+                                    <li> SGD 18++ / set</li>
                                 </ul>
                             </span>
+                            <p>
+                                <center><b>Chippy Fish</b></center>
+                            </p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -657,7 +691,6 @@
         });
     </script>
 
-    <!--<script src="js/landing-page.js"></script>-->
     <script>
         $(".clickme").on("click",
             function() {
@@ -665,8 +698,40 @@
                 $(this).toggleClass("tr-on-hover");
             });
     </script>
-    
+    <script>
+        // Instance the tour
+        var tour = new Tour({
+            onEnd: function (tour) {
+                $('#Attractions').modal('hide');
+            },
+            backdrop: true,
+            steps: [{
+                element: ".options",
+                title: "Welcome",
+                content: "You can start planning your trip by selecting one of \
+                the available options here.",
+                onHide: function() {
+                    $('#Attractions').modal('show');
+                }
+            }, {},
+            {
+                element: ".bigben",
+                title: "Where do you want to go?",
+                content: "Select the places you want to visit!",
+                onPrev: function() {
+                    $('#Attractions').modal('hide');
+                }
+            }]
+        });
 
+        // Initialize the tour
+        tour.init(true);
+
+
+        // Start the tour
+        tour.start(true)
+        tour.restart(true);
+    </script>
 
 </body>
 
