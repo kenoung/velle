@@ -5867,7 +5867,7 @@ button.close {
   border: 0;
 }
 .modal-open {
-  overflow: hidden;
+  overflow: visible;
 }
 .modal {
   position: fixed;
@@ -5969,7 +5969,7 @@ button.close {
   top: -9999px;
   width: 50px;
   height: 50px;
-  overflow: scroll;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .modal-dialog {
