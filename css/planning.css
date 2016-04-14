@@ -1,81 +1,109 @@
 body {
-  padding-top: 80px;
+    padding-top: 80px;
 }
+
+
+@media (max-width: 978px) {
+    body {
+        padding-top: 110px;
+    }
+}
+
+.heading {
+  margin-bottom: 0px;
+  font-size: 1.8em;
+}
+
+.organizer {
+  margin-top: 5px;
+}
+
 div.image {
-    margin: 5px;
-    position: relative;
-    width: 200px;
-    margin-right: 20px;
-}	
+  margin: 5px;
+  position: relative;
+  width: 200px;
+  margin-right: 20px;
+}
 
 div.image:hover {
-    border: 1px solid #777;
+  border: 1px solid #777;
 }
 
 div.image img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .desc {
-    padding: 15px;
-    text-align: center;
+  padding: 15px;
+  text-align: center;
 }
-.btn-success-1 {
-  margin-left: 40px;
+
+.space {
+  padding-left: 30px;
 }
 
 /** Navbar **/
 
 .navbar-brand {
-    font-family: 'Great Vibes', cursive;
-    font-size: 32px;
-    margin-top: 5px;
-    font-weight: 700;
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  margin-top: 5px;
+  font-weight: 700;
 }
 
-.pics{
-  width:70%;
-  float: left;
+.pics {
+  width: 100%;
   height: 42%;
   border-radius: 5px;
   margin: 10px;
   border: 3px solid black;
 }
 
-
-.container .col-sm-2{
+.container .col-sm-2 {
   padding-left: 0px;
 }
 
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
+.carousel .item img {
+  margin: 0 auto;
+  /* Align slide image horizontally center */
 }
 
-.col-md-3{
-    text-align: center;
-    margin-top:40px;
-    width: 24%;
+.col-md-3 {
+  text-align: center;
+  margin-top: 40px;
 }
 
-
-
-.carousel-control.left, .carousel-control.right{
-  background-image:none;
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
   height: 80%;
 }
 
-h3{
+h3 {
   text-align: center;
 }
 
-.col-md-9{
+.col-md-9 {
   float: center;
 }
-.container1{
-  padding:100px;
+
+.container1 {
+  padding: 100px;
 }
 
-.progress{
-  width:23%;
+.join {
+  margin-top: 10px;
+}
+
+.three-quarters > .join {
+  width: 80%;
+}
+
+/** Modal **/
+
+#forget-password {
+    color: black;
+    float: right;
+    clear: both;
 }

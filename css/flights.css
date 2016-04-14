@@ -35,12 +35,29 @@ h6 {
 	margin-right: 10%;
 }
 
+
+.glyphicon{
+    font-size:15px;
+    padding-right: 10px;
+}
+
 .panel-footer {
 	padding-right: 20px;
 }
 
-#forget-password {
-    color: black;
-    float: right;
-    clear: both;
+.col-xs-1{
+    margin:10px;
+}
+
+.hello p{
+    padding-left: 10px;
+}
+
+p{
+    margin:10px;
+}
+
+.container-fluid{
+
+    margin-bottom: 10px;
 }

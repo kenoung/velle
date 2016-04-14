@@ -2,9 +2,19 @@ body {
     padding: 20px;
 }
 
+.content {
+    padding-top: 80px;
+}
+
+
+@media (max-width: 978px) {
+    .content {
+        padding-top: 110px;
+    }
+}
+
 h1 {
     text-align: center;
-    padding-top: 50px;
 }
 
 .glyphicon {
@@ -39,14 +49,12 @@ select {
 }
 
 .col-md-3 {
-    width: 220px;
     padding: 20px;
     text-align: center;
 }
 
 .col-xs-3 {
     margin-top: 10px;
-    padding-left: 70px;
 }
 
 
@@ -90,7 +98,7 @@ select {
     width: 150px;
 }
 
-.modal-body {
+.modal-body1 {
     padding: 0px;
 }
 
@@ -123,4 +131,10 @@ select {
 
 .tr-on-hover:hover {
     opacity: 1.0;
+}
+
+#forget-password {
+    color: black;
+    float: right;
+    clear: both;
 }

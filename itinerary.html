@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/itinerary.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery.ui.chatbox.css">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -42,32 +45,138 @@
             </div>
         </div>
     </nav>
-    <h1> Organise Your Plans Here!</h1>
-    <div class="container">
-        <div class="col-xs-3 ">
-            <!--Sidebar content-->
-            <div class="buttons">
-                <a type="button" class="btn btn-success btn-success-1 btn-block" href="planning.html">Publish plan</a>
-                <br>
-            </div>
-            <div class="options">
-                <a data-toggle="modal" data-target="#Attractions"><span class="glyphicon glyphicon-star"></span>Attractions</a>
-                <br>
-                <a data-toggle="modal" data-target="#Accomodation"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
-                <br>
-                <a data-toggle="modal" data-target="#Food"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
-                <br>
-            </div>
-            <div class="details text-justify">
-                <h4>Click on any of the icons above</h4>
-                <p><b>Attractions</b>
-                    <br> Select from a variety of local attractions and add them to plan</p>
-                <p><b>Accomodation</b>
-                    <br> Select your desired acccomdation and add them to plan</p>
-                <p><b>Food</b>
-                    <br> Select your choice of local food</p>
-            </div>
 
+    <div class="content">
+        <h1> Organise Your Plans Here!</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-1">
+                    <!--Sidebar content-->
+                    <div class="buttons">
+                        <a type="button" class="btn btn-success btn-success-1 btn-block" data-toggle="modal" data-target="#loginModal">Publish plan</a>
+                        <br>
+                    </div>
+                    <div class="options">
+                        <a data-toggle="modal" data-target="#Attractions"><span class="glyphicon glyphicon-star"></span>Attractions</a>
+                        <br>
+                        <a data-toggle="modal" data-target="#Accomodation"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+                        <br>
+                        <a data-toggle="modal" data-target="#Food"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
+                        <br>
+                    </div>
+                    <div class="details text-justify">
+                        <h4>Click on any of the icons above</h4>
+                        <p><b>Attractions</b>
+                            <br> Select from a variety of local attractions and add them to plan</p>
+                        <p><b>Accomodation</b>
+                            <br> Select your desired acccomdation and add them to plan</p>
+                        <p><b>Food</b>
+                            <br> Select your choice of local food</p>
+                    </div>
+                </div>
+
+                <!--Body content-->
+
+                <div class="col-sm-3 text-center">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Day 1 </div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <p>0800</p> Breakfast @ Robert's Stew</li>
+                                    <li class="list-group-item">
+                                        <p>0900</p> London Ferris Wheel </li>
+                                    <li class="list-group-item">
+                                        <p>1130</p> Lunch @ The Butchers </li>
+                                    <li class="list-group-item">
+                                        <p>1300</p> Buckingdam Palace</li>
+                                    <li class="list-group-item">
+                                        <p>1500</p> Hammingway Museum </li>
+                                    <li class="list-group-item">
+                                        <p>1800</p> Dinner @ Burger & Lobsters </li>
+                                    <li class="list-group-item list-group-item-danger">
+                                        <p>2000</p>
+                                        <p>Accomodation at Hilton Hotel</p>
+                                        <p>
+                                            <button class="btn btn-warning button-hilton" data-toggle="modal" data-target="#BookingHilton">Book Now</button>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                </div>
+
+
+                <div class="col-sm-3 text-center">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Day 2</div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <p>0800</p> Breakfast @ The Butchers</li>
+                                    <li class="list-group-item">
+                                        <p>0900</p> Riverside Quay </li>
+                                    <li class="list-group-item">
+                                        <p>1130</p> Lunch @ King's Salmon </li>
+                                    <li class="list-group-item">
+                                        <p>1300</p> Prince George's Castle </li>
+                                    <li class="list-group-item">
+                                        <p>1500</p> Big Ben </li>
+                                    <li class="list-group-item">
+                                        <p>1800</p> Dinner @ Robert's Stew </li>
+                                    <li class="list-group-item list-group-item-danger">
+                                        <p>2200</p>
+                                        <p>Accomodation @ Hotel Cannovaro</p>
+                                        <p>
+                                            <button class="btn btn-success disabled">Booked</button>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 text-center">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Day 3</div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <p>0800</p> Breakfast @ Waffletown</li>
+                                    <li class="list-group-item">
+                                        <p>0900</p> Hamming Way Museum </li>
+                                    <li class="list-group-item">
+                                        <p>1130</p> Lunch @ Chippy Fish </li>
+                                    <li class="list-group-item">
+                                        <p>1300</p> Old Supreme Court </li>
+                                    <li class="list-group-item">
+                                        <p>1500</p> Riverside Quay </li>
+                                    <li class="list-group-item">
+                                        <p>1800</p> Dinner @ Burger & Lobsters </li>
+                                    <li class="list-group-item list-group-item-danger">
+                                        <p>2200</p>
+                                        <p>Accomodation @ St Paul's Hote</p>
+                                        <p>
+                                            <button class="btn btn-warning button-paul" data-toggle="modal" data-target="#BookingPaul">Book Now</button>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+            </div>
         </div>
 
         <!--Modal content-->
@@ -92,7 +201,7 @@
                         </div>
 
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body1">
                         <div class="col-xs-12 tr-on-hover clickme">
                             <img src="img/attractions/bigben1.jpg">
                             <span class="more-info">
@@ -117,7 +226,7 @@
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/attractions/attraction2.jpg">
                             <span class="more-info">
-                                <h4><center><strong>Buckingham Palace</strong></center></h4>
+                                <h4><center><strong>Buckingdam Palace</strong></center></h4>
                                 <ul>
                                     <li> Explore the century old palace </li>
                                     <li> Free Entrance </li>
@@ -192,7 +301,7 @@
                             <h3 class="modal-title text-center"><strong>Accomodation</strong></h3>
                         </div>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body1">
                         <div class="col-sm-12 tr-on-hover clickme">
                             <img src="img/accomodation/LondonHotel.jpg" width="830" height="333">
                             <span class="more-info">
@@ -206,7 +315,7 @@
                         <div class="col-xs-4 tr-on-hover clickme">
                             <img src="img/accomodation/hotel1.jpg" width="250" height="200">
                             <span class="more-info">
-                                <h4><center><strong>Tomsbury Hotel</strong></center></h4>
+                                <h4><center><strong>St Paul's Hotel</strong></center></h4>
                                 <ul>
                                     <li>Beside Stamford Station</li>
                                     <li> Rates starting from SGD 150 / Night </li>
@@ -292,7 +401,7 @@
                             <h3 class="modal-title text-center"><strong>Food</strong></h3>
                         </div>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body1">
                         <div class="col-xs-12 tr-on-hover clickme">
                             <img class="img-responsive" src="img/food/burgers.jpg" width="830" height="333">
                             <span class="more-info">
@@ -383,7 +492,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body1">
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2">
                                 <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
@@ -433,7 +542,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
+                        <button type="button" class="btn btn-success btn-lg" data-dismiss="modal" id="confirm-hilton">Confirm Booking</button>
                     </div>
                 </div>
             </div>
@@ -447,7 +556,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body1">
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2">
                                 <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
@@ -497,7 +606,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
+                        <button type="button" class="btn btn-success btn-lg" data-dismiss="modal" id="confirm-paul">Confirm Booking</button>
                     </div>
                 </div>
             </div>
@@ -505,114 +614,99 @@
 
         <!--End Booking Modals-->
 
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
 
-        <!--Body content-->
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <ul class="nav nav-tabs" id="tabContent">
+                        <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
+                        <li><a href="#register-tab" data-toggle="tab">Register</a></li>
+                    </ul>
 
-        <div class="col-md-3">
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Day 1</div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p>0800</p> Breakfast @ </li>
-                            <li class="list-group-item">
-                                <p>0900</p> Churchill War Rooms </li>
-                            <li class="list-group-item">
-                                <p>1130</p> Lunch @ Casse-Croûte </li>
-                            <li class="list-group-item">
-                                <p>1300</p> Hampton Court Palace </li>
-                            <li class="list-group-item">
-                                <p>1500</p> Tate Modern </li>
-                            <li class="list-group-item">
-                                <p>1800</p> Dinner @ Burger & Lobsters </li>
-                            <li class="list-group-item">
-                                <p>2000</p> Tower Bridge </li>
-                            <li class="list-group-item list-group-item-danger">
-                                <p>2200</p>
-                                <p>Accomodation @ Hilton Hotel</p>
-                                <p>
-                                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingHilton">Book Now</button>
-                                </p>
-                            </li>
-                        </ul>
+                    <div class="tab-content">
 
+                        <div class="tab-pane active" id="login-tab">
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input type="text" class="form-control" id="username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input type="password" class="form-control" id="password" name="password">
+                                    </div>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" value="">Stay signed in</label>
+
+                                    <a id="forget-password" href="#">Forgot password? </a>
+
+                                    <hr>
+                                    <a class="btn btn-success btn-block afterLogin" href="planning.1.html">Login</a>
+
+                                    <h2 class="text-center">OR</h2>
+
+                                    <a class="btn btn-block btn-social btn-facebook">
+                                        <i class="fa fa-facebook"></i> Sign in with Facebook
+                                    </a>
+                                    <a class="btn btn-block btn-social btn-google">
+                                        <i class="fa fa-google"></i> Sign in with Google
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="register-tab">
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input type="text" class="form-control" id="username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input type="password" class="form-control" id="password" name="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Re-Enter Password:</label>
+                                        <input type="password" class="form-control" id="password" name="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date">Date Of Birth (dd/mm/yy) </label>
+                                        <input type="date" class="form-control" id="date" name="date">
+                                    </div>
+                                    <div class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="ballet" value="1" checked />Male
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="ballet" value="1" />Female
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <a class="btn btn-success btn-block afterLogin" type="submit" href="planning.1.html">
+                                        Register
+                                        </a>
+                                    </div>
+
+                                    <h2 class="text-center">OR</h2>
+
+                                    <a class="btn btn-block btn-social btn-facebook">
+                                        <i class="fa fa-facebook"></i> Register with Facebook
+                                    </a>
+                                    <a class="btn btn-block btn-social btn-google">
+                                        <i class="fa fa-google"></i> Register with Google
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
         </div>
-
-
-        <div class="col-md-3">
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Day 2</div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p>0800</p> Breakfast @ </li>
-                            <li class="list-group-item">
-                                <p>0900</p> Churchill War Rooms </li>
-                            <li class="list-group-item">
-                                <p>1130</p> Lunch @ Casse-Croûte </li>
-                            <li class="list-group-item">
-                                <p>1300</p> Hampton Court Palace </li>
-                            <li class="list-group-item">
-                                <p>1500</p> Tate Modern </li>
-                            <li class="list-group-item">
-                                <p>1800</p> Dinner @ Burger & Lobsters </li>
-                            <li class="list-group-item">
-                                <p>2000</p> Tower Bridge </li>
-                            <li class="list-group-item list-group-item-danger">
-                                <p>2200</p>
-                                <p>Accomodation @ Hampshire</p>
-                                <p>
-                                    <button class="btn btn-success disabled">Booked</button>
-                                </p>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Day 3</div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <p>0800</p> Breakfast @ </li>
-                            <li class="list-group-item">
-                                <p>0900</p> Churchill War Rooms </li>
-                            <li class="list-group-item">
-                                <p>1130</p> Lunch @ Casse-Croûte </li>
-                            <li class="list-group-item">
-                                <p>1300</p> Hampton Court Palace </li>
-                            <li class="list-group-item">
-                                <p>1500</p> Tate Modern </li>
-                            <li class="list-group-item">
-                                <p>1800</p> Dinner @ Burger & Lobsters </li>
-                            <li class="list-group-item">
-                                <p>2000</p> Tower Bridge </li>
-                            <li class="list-group-item list-group-item-danger">
-                                <p>2200</p>
-                                <p>Accomodation @ St. Paul's Hotel</p>
-                                <p>
-                                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingPaul">Book Now</button>
-                                </p>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-        </div>
-
 
 
     </div>
@@ -622,6 +716,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <div id="chat_div"></div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.chatbox.js"></script>
 
     <!-- Bootstrap Form Helpers -->
     <script src="build/js/countrySelect.min.js"></script>
@@ -637,6 +737,18 @@
             function() {
                 $(this).children("img").toggleClass("imgActive");
                 $(this).toggleClass("tr-on-hover");
+            });
+
+        $("#confirm-hilton").on("click",
+            function() {
+                alert("Your booking for Hilton Hotel London is successful.");
+                $(".button-hilton").replaceWith("<button class=\"btn btn-success disabled\">Booked</button>")
+            });
+
+        $("#confirm-paul").on("click",
+            function() {
+                alert("Your booking for St. Paul's London in successful.");
+                $(".button-paul").replaceWith("<button class=\"btn btn-success disabled\">Booked</button>")
             });
     </script>
 

@@ -44,6 +44,9 @@
                 <a class="navbar-brand" href="index.html">Velle</a>
             </div>
             <div class="nav navbar-nav navbar-right cty">
+                <span class="glyphicon glyphicon-user" style="color:white; padding-right:10px"></span>
+                        <a data-toggle="modal" data-target="#myModal"><font color="white">Login / Register</font></a>
+                <span class="space"></span>
                 <input id="country_selector" type="text">
             </div>
         </div>
@@ -80,7 +83,6 @@
         </div>
         <!-- /.container -->
 
-        <p class="login">Already Registered? <a data-toggle="modal" data-target="#myModal">Login here</a></p>
     </div>
     <!-- /.intro-header -->
 
@@ -114,7 +116,7 @@
                                 <a id="forget-password" href="#">Forgot password? </a>
 
                                 <hr>
-                                <button type="submit" class="btn btn-success btn-block">Login</button>
+                                <a href="profile.html" class="btn btn-success btn-block" onclick="alert('Login successful!')">Login</a>
                                 
                                 <h2 class="text-center">OR</h2>
 
@@ -157,9 +159,9 @@
                                 </div>
                                 <hr>
                                 <div>
-                                    <button class="btn btn-success btn-block" type="submit" onclick="alert('Registration successful!')">
+                                    <a href="profile.html" class="btn btn-success btn-block" type="submit" onclick="alert('Registration successful!')">
                                         Register
-                                    </button>
+                                    </a>
                                 </div>
                                                                 
                                 <h2 class="text-center">OR</h2>

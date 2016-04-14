@@ -13,3 +13,4 @@ Static website made using bootstrap
 - [Bootstrap](http://getbootstrap.com/)
 - [Google Maps API for Geocoding](https://developers.google.com/maps/documentation/geocoding/intro)
 - [Isotope for filtering](http://isotope.metafizzy.co/)
+- [jQuery Chatbox](https://github.com/dexterpu/jquery.ui.chatbox)

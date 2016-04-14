@@ -1,8 +1,13 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en-US">
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Collaborate and travel with newfound friends!">
+  <meta name="author" content="The Velle Team">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -99,7 +104,7 @@
 
 
         <h6 class="organizer text-center"></span>By <a href="profile.html"> Rhynade See </a></h6>
-        <h5><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="#travellers" data-toggle="collapse">Travellers</a>: 4/10 </h5>
+        <h5><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="#travellers" data-toggle="collapse">Travellers</a>: 1/10 </h5>
 
         <div id="travellers" class="collapse text-center">
           <a href="profile2.html"> Jun Weng </a>
@@ -119,7 +124,7 @@
         </ul>
 
       </div>
-      <div class="col-xs-2 three-quarters valign">
+      <div class="col-md-2 three-quarters">
         <button type="button" class="btn btn-warning btn-block join" id="join-trip" data-toggle="modal" data-target="#loginModal">Join Trip</button>
       </div>
     </div>
@@ -406,102 +411,6 @@
       </div>
     </div>
   </div>
-  
-  <!-- Login Modal -->
-  <div id="loginModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-sm">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <ul class="nav nav-tabs" id="tabContent">
-          <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
-          <li><a href="#register-tab" data-toggle="tab">Register</a></li>
-        </ul>
-
-        <div class="tab-content">
-
-          <div class="tab-pane active" id="login-tab">
-            <div class="modal-body">
-              <form role="form">
-                <div class="form-group">
-                  <label for="username">Username:</label>
-                  <input type="text" class="form-control" id="username" name="username">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password:</label>
-                  <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="">Stay signed in</label>
-
-                <a id="forget-password" href="#">Forgot password? </a>
-
-                <hr>
-                <button type="button" class="btn btn-success btn-block afterLogin">Login</button>
-
-                <h2 class="text-center">OR</h2>
-
-                <a class="btn btn-block btn-social btn-facebook">
-                  <i class="fa fa-facebook"></i> Sign in with Facebook
-                </a>
-                <a class="btn btn-block btn-social btn-google">
-                  <i class="fa fa-google"></i> Sign in with Google
-                </a>
-              </form>
-            </div>
-          </div>
-
-          <div class="tab-pane" id="register-tab">
-            <div class="modal-body">
-              <form role="form">
-                <div class="form-group">
-                  <label for="username">Username:</label>
-                  <input type="text" class="form-control" id="username" name="username">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password:</label>
-                  <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <div class="form-group">
-                  <label for="password">Re-Enter Password:</label>
-                  <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <div class="form-group">
-                  <label for="date">Date Of Birth (dd/mm/yy) </label>
-                  <input type="date" class="form-control" id="date" name="date">
-                </div>
-                <div class="text-center">
-                  <label class="radio-inline">
-                    <input type="radio" name="ballet" value="1" checked />Male
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="ballet" value="1" />Female
-                  </label>
-                </div>
-                <hr>
-                <div>
-                  <a class="btn btn-success btn-block afterLogin" type="submit" onclick="alert('Registration successful!')">
-                                        Register
-                                    </a>
-                </div>
-
-                <h2 class="text-center">OR</h2>
-
-                <a class="btn btn-block btn-social btn-facebook">
-                  <i class="fa fa-facebook"></i> Register with Facebook
-                </a>
-                <a class="btn btn-block btn-social btn-google">
-                  <i class="fa fa-google"></i> Register with Google
-                </a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   <!--End Booking Modals-->
 
   <div id="chat_div"></div>
@@ -514,7 +423,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.ui.chatbox.js"></script>
-  
+
   <!-- Bootstrap Form Helpers -->
   <script src="build/js/countrySelect.min.js"></script>
   <script>
@@ -524,23 +433,22 @@
   </script>
 
   <script>
-    $(".afterLogin").on("click",
+    $(document).ready(
       function() {
-        $("#loginModal").modal('toggle');
-        alert("Trip joined!");
+        alert("You have published your itinerary!");
         $("#join-trip").replaceWith("<button class=\"btn btn-success btn-block disabled join\"> Joined </button> \
                                      \
-                                     <a href=\"flights2.html\" class=\"btn btn-warning btn-block join\"> Select Flights </button>");
+                                     <a href=\"flights.html\" class=\"btn btn-warning btn-block join\"> Select Flights </button>");
 
         $("#chat_div").chatbox({
           id: "chat_div",
           title: "London 8D7N",
-          user: "Jun Weng",
+          user: "Rhynade",
           offset: "60px"
         });
 
         // to insert a message
-        $("#chat_div").chatbox("option", "boxManager").addMsg("Velle", "Hi Jun Weng, I see you've joined a new trip. You can use this space to chat with other collaborators.");
+        $("#chat_div").chatbox("option", "boxManager").addMsg("Velle", "Hi Rhynade, I see you've created a new trip. You can use this space to chat with other collaborators.");
 
       })
   </script>

@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/join.css" rel="stylesheet">
@@ -43,11 +44,108 @@
                 <a class="navbar-brand" href="index.html">Velle</a>
             </div>
             <div class="nav navbar-nav navbar-right cty">
+                <span class="glyphicon glyphicon-user" style="color:white; padding-right:10px"></span>
+                        <a data-toggle="modal" data-target="#myModal"><font color="white">Login / Register</font></a>
+                <span class="space"></span>
                 <input id="country_selector" type="text">
             </div>
         </div>
     </nav>
-    <!-- ./Navigation -->
+
+    <!-- Login Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <ul class="nav nav-tabs" id="tabContent">
+                    <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
+                    <li><a href="#register-tab" data-toggle="tab">Register</a></li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane active" id="login-tab">
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="username">Username:</label>
+                                    <input type="text" class="form-control" id="username" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" id="password" name="password">
+                                </div>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">Stay signed in</label>
+
+                                <a id="forget-password" href="#">Forgot password? </a>
+
+                                <hr>
+                                <a href="profile.html" class="btn btn-success btn-block" onclick="alert('Login successful!')">Login</a>
+                                
+                                <h2 class="text-center">OR</h2>
+
+                                <a class="btn btn-block btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                </a>
+                                <a class="btn btn-block btn-social btn-google">
+                                    <i class="fa fa-google"></i> Sign in with Google
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="register-tab">
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="username">Username:</label>
+                                    <input type="text" class="form-control" id="username" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" id="password" name="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Re-Enter Password:</label>
+                                    <input type="password" class="form-control" id="password" name="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Date Of Birth (dd/mm/yy) </label>
+                                    <input type="date" class="form-control" id="date" name="date">
+                                </div>
+                                <div class="text-center">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="ballet" value="1" checked />Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="ballet" value="1" />Female
+                                    </label>
+                                </div>
+                                <hr>
+                                <div>
+                                    <a href="profile.html" class="btn btn-success btn-block" type="submit" onclick="alert('Registration successful!')">
+                                        Register
+                                    </a>
+                                </div>
+                                                                
+                                <h2 class="text-center">OR</h2>
+
+                                <a class="btn btn-block btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i> Register with Facebook
+                                </a>
+                                <a class="btn btn-block btn-social btn-google">
+                                    <i class="fa fa-google"></i> Register with Google
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!--Start Content-->
     <div class="container">
