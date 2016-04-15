@@ -121,7 +121,7 @@
 
       </div>
       <div class="col-md-2 three-quarters">
-        <button type="button" class="btn btn-warning btn-block join" id="join-trip" data-toggle="modal" data-target="#loginModal">Join Trip</button>
+        <a href="itineraryRhy.html" class="btn btn-warning btn-block join" id="join-trip">Back to Editing</a>
       </div>
     </div>
   </div>
@@ -150,13 +150,10 @@
                   <p>1800</p> Dinner @ Burger & Fries </li>
                 <li class="list-group-item">
                   <p>2000</p> Tower Bridge </li>
-                <li class="list-group-item list-group-item-danger">
+                <li class="list-group-item">
                   <p>2200</p>
                   <p>Accomodation @
                     <br> Hilton Hotel</p>
-                  <p>
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
-                  </p>
                 </li>
               </ul>
 
@@ -186,13 +183,10 @@
                   <p>1800</p> Dinner @ Soho Ramen </li>
                 <li class="list-group-item">
                   <p>2000</p> Harrods </li>
-                <li class="list-group-item list-group-item-danger">
+                <li class="list-group-item">
                   <p>2200</p>
                   <p>Accomodation @
                     <br> Hampshire</p>
-                  <p>
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
-                  </p>
                 </li>
               </ul>
 
@@ -221,13 +215,10 @@
                   <p>1800</p> Dinner @ Rio Eating House </li>
                 <li class="list-group-item">
                   <p>2000</p> Somerset House </li>
-                <li class="list-group-item list-group-item-danger">
+                <li class="list-group-item">
                   <p>2200</p>
                   <p>Accomodation @
                     <br> St. Paul's Hotel</p>
-                  <p>
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
-                  </p>
                 </li>
               </ul>
 
@@ -257,13 +248,10 @@
                   <p>1800</p> Dinner @ Burger & Chips </li>
                 <li class="list-group-item">
                   <p>2000</p> Regent's Park </li>
-                <li class="list-group-item list-group-item-danger">
+                <li class="list-group-item">
                   <p>2200</p>
                   <p>Accomodation @
                     <br> St. Paul's Hotel</p>
-                  <p>
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
-                  </p>
                 </li>
               </ul>
 
@@ -432,20 +420,6 @@
     $(document).ready(
       function() {
         alert("You have published your itinerary!");
-        $("#join-trip").replaceWith("<button class=\"btn btn-success btn-block disabled join\"> Joined </button> \
-                                     \
-                                     <a href=\"flights.html\" class=\"btn btn-warning btn-block join\"> Select Flights </a>");
-
-        $("#chat_div").chatbox({
-          id: "chat_div",
-          title: "London 8D7N",
-          user: "Rhynade",
-          offset: "60px"
-        });
-
-        // to insert a message
-        $("#chat_div").chatbox("option", "boxManager").addMsg("Velle", "Hi Rhynade, I see you've created a new trip. You can use this space to chat with other collaborators.");
-
       })
   </script>
 

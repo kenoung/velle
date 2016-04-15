@@ -16,7 +16,11 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    
+
+
+
+    <script src="function.js"></script>
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -31,25 +35,35 @@
 
 <body>
 
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">Velle</a>
             </div>
+
             <div class="nav navbar-nav navbar-right cty">
+                <span class="glyphicon glyphicon-user" style="color:white; padding-right:10px"></span>
+                <a href="profile.html"><font color="white"> Rhynade See</font></a>
+                <span class="space"></span>
                 <input id="country_selector" type="text">
             </div>
         </div>
     </nav>
 
     <div class="content">
-        <h1> Organise Your Plans Here!</h1>
+        <h1>Start editing the itinerary!</h1>
 
         <div class="container">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-1">
                     <!--Sidebar content-->
-                    <a type="button" class="btn btn-success btn-success-1 btn-block" data-toggle="modal" data-target="#loginModal">Publish plan</a>
+
+                    <!--Vote for flights-->
+                    <p>
+                        <a href="flights.html" class="btn btn-warning btn-block join">
+                            <span class="glyphicon glyphicon-plane right-padding"> </span> Update Vote</a>
+                    </p>
 
                     <div class="options">
                         <a data-toggle="modal" data-target="#Attractions"><span class="glyphicon glyphicon-star"></span>Attractions</a>
@@ -92,7 +106,8 @@
                                         <p>1800</p> Dinner @ Burger & Lobsters </li>
                                     <li class="list-group-item">
                                         <p>2000</p>
-                                        <p>Accomodation @<br> Hilton Hotel</p>
+                                        <p>Accomodation @
+                                            <br> Hilton Hotel</p>
                                     </li>
                                 </ul>
 
@@ -123,7 +138,8 @@
                                         <p>1800</p> Dinner @ Robert's Stew </li>
                                     <li class="list-group-item">
                                         <p>2200</p>
-                                        <p>Accomodation @<br> Hotel Cannovaro</p>
+                                        <p>Accomodation @
+                                            <br> Hotel Cannovaro</p>
                                     </li>
                                 </ul>
 
@@ -152,7 +168,8 @@
                                         <p>1800</p> Dinner @ Burger & Lobsters </li>
                                     <li class="list-group-item">
                                         <p>2200</p>
-                                        <p>Accomodation @<br> St Paul's Hote</p>
+                                        <p>Accomodation @
+                                            <br> St Paul's Hotel</p>
                                     </li>
                                 </ul>
 
@@ -468,101 +485,6 @@
         </div>
 
 
-        <!-- Login Modal -->
-        <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-sm">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <ul class="nav nav-tabs" id="tabContent">
-                        <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
-                        <li><a href="#register-tab" data-toggle="tab">Register</a></li>
-                    </ul>
-
-                    <div class="tab-content">
-
-                        <div class="tab-pane active" id="login-tab">
-                            <div class="modal-body">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input type="text" class="form-control" id="username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" value="">Stay signed in</label>
-
-                                    <a id="forget-password" href="#">Forgot password? </a>
-
-                                    <hr>
-                                    <a class="btn btn-success btn-block afterLogin" href="planning.1.html">Login</a>
-
-                                    <h2 class="text-center">OR</h2>
-
-                                    <a class="btn btn-block btn-social btn-facebook">
-                                        <i class="fa fa-facebook"></i> Sign in with Facebook
-                                    </a>
-                                    <a class="btn btn-block btn-social btn-google">
-                                        <i class="fa fa-google"></i> Sign in with Google
-                                    </a>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane" id="register-tab">
-                            <div class="modal-body">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input type="text" class="form-control" id="username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Re-Enter Password:</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="date">Date Of Birth (dd/mm/yy) </label>
-                                        <input type="date" class="form-control" id="date" name="date">
-                                    </div>
-                                    <div class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="ballet" value="1" checked />Male
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="ballet" value="1" />Female
-                                        </label>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <a class="btn btn-success btn-block afterLogin" type="submit" href="planning.1.html">
-                                        Register
-                                        </a>
-                                    </div>
-
-                                    <h2 class="text-center">OR</h2>
-
-                                    <a class="btn btn-block btn-social btn-facebook">
-                                        <i class="fa fa-facebook"></i> Register with Facebook
-                                    </a>
-                                    <a class="btn btn-block btn-social btn-google">
-                                        <i class="fa fa-google"></i> Register with Google
-                                    </a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
     </div>
     <!-- jQuery -->
@@ -585,7 +507,6 @@
         });
     </script>
 
-    <!--<script src="js/landing-page.js"></script>-->
     <script>
         $(".clickme").on("click",
             function() {
@@ -593,17 +514,16 @@
                 $(this).toggleClass("tr-on-hover");
             });
 
-        $("#confirm-hilton").on("click",
-            function() {
-                alert("Your booking for Hilton Hotel London is successful.");
-                $(".button-hilton").replaceWith("<button class=\"btn btn-success disabled\">Booked</button>")
-            });
 
-        $("#confirm-paul").on("click",
+        $(document).ready(
             function() {
-                alert("Your booking for St. Paul's London in successful.");
-                $(".button-paul").replaceWith("<button class=\"btn btn-success disabled\">Booked</button>")
-            });
+                $("#chat_div").chatbox({
+                    id: "chat_div",
+                    title: "London 8D7N",
+                    user: "Rhynade See",
+                    offset: "60px"
+                });
+            })
     </script>
 
 

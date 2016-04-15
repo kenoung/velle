@@ -16,7 +16,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -31,25 +31,38 @@
 
 <body>
 
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">Velle</a>
             </div>
+
             <div class="nav navbar-nav navbar-right cty">
+                <span class="glyphicon glyphicon-user" style="color:white; padding-right:10px"></span>
+                <a href="profile2.html"><font color="white"> Jun Weng</font></a>
+                <span class="space"></span>
                 <input id="country_selector" type="text">
             </div>
         </div>
     </nav>
 
     <div class="content">
-        <h1> Organise Your Plans Here!</h1>
+        <h1>Start editing the itinerary!</h1>
 
         <div class="container">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-1">
                     <!--Sidebar content-->
-                    <a type="button" class="btn btn-success btn-success-1 btn-block" data-toggle="modal" data-target="#loginModal">Publish plan</a>
+
+                    <!--Vote for flights-->
+                    <p>
+                        <button type="button" class="btn btn-success disabled btn-block"> Voting Closed</button>
+                    </p>
+                    <p>
+                        <a type="button" id="PayMoney" class="btn btn-warning btn-block" data-toggle="modal" data-target="#MakePayment">
+                            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Make Payment</a>
+                    </p>
 
                     <div class="options">
                         <a data-toggle="modal" data-target="#Attractions"><span class="glyphicon glyphicon-star"></span>Attractions</a>
@@ -92,7 +105,8 @@
                                         <p>1800</p> Dinner @ Burger & Lobsters </li>
                                     <li class="list-group-item">
                                         <p>2000</p>
-                                        <p>Accomodation @<br> Hilton Hotel</p>
+                                        <p>Accomodation @
+                                            <br> Hilton Hotel</p>
                                     </li>
                                 </ul>
 
@@ -123,7 +137,8 @@
                                         <p>1800</p> Dinner @ Robert's Stew </li>
                                     <li class="list-group-item">
                                         <p>2200</p>
-                                        <p>Accomodation @<br> Hotel Cannovaro</p>
+                                        <p>Accomodation @
+                                            <br> Hotel Cannovaro</p>
                                     </li>
                                 </ul>
 
@@ -152,7 +167,8 @@
                                         <p>1800</p> Dinner @ Burger & Lobsters </li>
                                     <li class="list-group-item">
                                         <p>2200</p>
-                                        <p>Accomodation @<br> St Paul's Hote</p>
+                                        <p>Accomodation @
+                                            <br> St Paul's Hotel</p>
                                     </li>
                                 </ul>
 
@@ -467,101 +483,281 @@
             </div>
         </div>
 
+        <!--Booking Modals-->
 
-        <!-- Login Modal -->
-        <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-sm">
-
+        <div class="modal fade" id="MakePayment" role="dialog">
+            <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <ul class="nav nav-tabs" id="tabContent">
-                        <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
-                        <li><a href="#register-tab" data-toggle="tab">Register</a></li>
-                    </ul>
-
-                    <div class="tab-content">
-
-                        <div class="tab-pane active" id="login-tab">
-                            <div class="modal-body">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input type="text" class="form-control" id="username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" value="">Stay signed in</label>
-
-                                    <a id="forget-password" href="#">Forgot password? </a>
-
-                                    <hr>
-                                    <a class="btn btn-success btn-block afterLogin" href="planning.1.html">Login</a>
-
-                                    <h2 class="text-center">OR</h2>
-
-                                    <a class="btn btn-block btn-social btn-facebook">
-                                        <i class="fa fa-facebook"></i> Sign in with Facebook
-                                    </a>
-                                    <a class="btn btn-block btn-social btn-google">
-                                        <i class="fa fa-google"></i> Sign in with Google
-                                    </a>
-                                </form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-center"><strong>One-Click Booking</strong></h3>
+                    </div>
+                    <div class="modal-body container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
+                                <br>
+                                <h4 class="text-center"><span class="glyphicon glyphicon-home"></span> Hotels</h4>
+                                <div class="col-sm-6">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Day 1 Hotel</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td width="40%"><strong>Hotel Name</strong></td>
+                                                <td width="60%">Hilton Hotel London</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Room Type</strong></td>
+                                                <td>Deluxe Single</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Amenities</strong></td>
+                                                <td>Breakfast included</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-in</strong></td>
+                                                <td>2 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-out</strong></td>
+                                                <td>3 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Price</strong></td>
+                                                <td>$100</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-6">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Day 2 Hotel</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td width="40%"><strong>Hotel Name</strong></td>
+                                                <td width="60%">Hampshire Hotel</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Room Type</strong></td>
+                                                <td>Deluxe Single</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Amenities</strong></td>
+                                                <td>Breakfast included</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-in</strong></td>
+                                                <td>2 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-out</strong></td>
+                                                <td>3 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Price</strong></td>
+                                                <td>$129</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-6">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Day 3 Hotel</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td width="40%"><strong>Hotel Name</strong></td>
+                                                <td width="60%">St. Paul's Hotel</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Room Type</strong></td>
+                                                <td>Deluxe Single</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Amenities</strong></td>
+                                                <td>Breakfast included</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-in</strong></td>
+                                                <td>2 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-out</strong></td>
+                                                <td>3 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Price</strong></td>
+                                                <td>$99</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-6">
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Day 4 Hotel</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td width="40%"><strong>Hotel Name</strong></td>
+                                                <td width="60%">St. Paul's Hotel</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Room Type</strong></td>
+                                                <td>Deluxe Single</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Amenities</strong></td>
+                                                <td>Breakfast included</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-in</strong></td>
+                                                <td>2 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Check-out</strong></td>
+                                                <td>3 Mar 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Price</strong></td>
+                                                <td>$129</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="register-tab">
-                            <div class="modal-body">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input type="text" class="form-control" id="username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Re-Enter Password:</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="date">Date Of Birth (dd/mm/yy) </label>
-                                        <input type="date" class="form-control" id="date" name="date">
-                                    </div>
-                                    <div class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="ballet" value="1" checked />Male
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="ballet" value="1" />Female
-                                        </label>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <a class="btn btn-success btn-block afterLogin" type="submit" href="planning.1.html">
-                                        Register
-                                        </a>
-                                    </div>
-
-                                    <h2 class="text-center">OR</h2>
-
-                                    <a class="btn btn-block btn-social btn-facebook">
-                                        <i class="fa fa-facebook"></i> Register with Facebook
-                                    </a>
-                                    <a class="btn btn-block btn-social btn-google">
-                                        <i class="fa fa-google"></i> Register with Google
-                                    </a>
-                                </form>
-                            </div>
+                        <h4 class="text-center"><span class="glyphicon glyphicon-plane"></span> Flights</h4>
+                        <div class="col-sm-6">
+                            <table class="table table-hover table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Departure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="40%"><strong>Airline</strong></td>
+                                        <td width="60%">Singapore Airlines</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>From</strong></td>
+                                        <td>Singapore</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Changi Airport</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>28/02/16 08:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To</td>
+                                        <td>London</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Heathrow Airport</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>28/03/16 18:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Price</strong></td>
+                                        <td>$400</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                        <div class="col-sm-6">
+                            <table class="table table-hover table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Arrival</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="40%"><strong>Airline</strong></td>
+                                        <td width="60%">Singapore Airlines</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>From</strong></td>
+                                        <td>London</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Heathrow Airport</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>07/03/16 08:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To</td>
+                                        <td>Singapore</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Changi Airport</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>07/03/16 18:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Price</strong></td>
+                                        <td>$400</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <form role="form">
+                                <div class="form-group col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <h4 class="text-center"><strong>Step 2 </strong> Select Your Payment Method</h4>
+                                    <h4 class="text-center">Total Charge: <strong>$1257.</h4>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio"><strong>Primary Credit Card </strong>
+                                            <p class="text-muted">Registered to Jun Weng | Ending in 1403</p>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio"><strong>Paypal</strong>
+                                            <p class="text-muted">Registered to junweng@hotmail.com</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="paid" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
                     </div>
                 </div>
             </div>
         </div>
-
 
     </div>
     </div>
@@ -585,7 +781,6 @@
         });
     </script>
 
-    <!--<script src="js/landing-page.js"></script>-->
     <script>
         $(".clickme").on("click",
             function() {
@@ -593,17 +788,23 @@
                 $(this).toggleClass("tr-on-hover");
             });
 
-        $("#confirm-hilton").on("click",
-            function() {
-                alert("Your booking for Hilton Hotel London is successful.");
-                $(".button-hilton").replaceWith("<button class=\"btn btn-success disabled\">Booked</button>")
-            });
 
-        $("#confirm-paul").on("click",
+        $(document).ready(
             function() {
-                alert("Your booking for St. Paul's London in successful.");
-                $(".button-paul").replaceWith("<button class=\"btn btn-success disabled\">Booked</button>")
-            });
+                $("#chat_div").chatbox({
+                    id: "chat_div",
+                    title: "London 8D7N",
+                    user: "Jun Weng",
+                    offset: "60px"
+                });
+            })
+
+        $("#paid").on("click",
+            function() {
+                $("#MakePayment").modal("toggle");
+                $("#PayMoney").replaceWith("<button class=\"btn btn-block btn-success disabled join\"><span class=\"glyphicon glyphicon-usd\"><\/span> Paid<\/button>");
+            }
+        )
     </script>
 
 
