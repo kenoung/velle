@@ -9,7 +9,7 @@
   <meta name="description" content="Collaborate and travel with newfound friends!">
   <meta name="author" content="The Velle Team">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.css">
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -34,7 +34,11 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="index.html">Velle</a>
       </div>
+
       <div class="nav navbar-nav navbar-right cty">
+        <span class="glyphicon glyphicon-user" style="color:white; padding-right:10px"></span>
+        <a href="profile.html"><font color="white"> Rhynade See</font></a>
+        <span class="space"></span>
         <input id="country_selector" type="text">
       </div>
     </div>
@@ -125,7 +129,8 @@
 
       </div>
       <div class="col-md-2 three-quarters">
-        <button type="button" class="btn btn-warning btn-block join" id="join-trip" data-toggle="modal" data-target="#loginModal">Join Trip</button>
+        <button type="button" class="btn btn-success btn-block disabled join">Joined</button>
+        <a href="flights.html" class="btn btn-warning btn-block join"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span> Update Vote</a>
       </div>
     </div>
   </div>
@@ -159,7 +164,7 @@
                   <p>Accomodation @
                     <br> Hilton Hotel</p>
                   <p>
-                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingHilton">Book Now</button>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
                   </p>
                 </li>
               </ul>
@@ -195,7 +200,7 @@
                   <p>Accomodation @
                     <br> Hampshire</p>
                   <p>
-                    <button class="btn btn-success disabled">Booked</button>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
                   </p>
                 </li>
               </ul>
@@ -230,7 +235,7 @@
                   <p>Accomodation @
                     <br> St. Paul's Hotel</p>
                   <p>
-                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingPaul">Book Now</button>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
                   </p>
                 </li>
               </ul>
@@ -266,7 +271,7 @@
                   <p>Accomodation @
                     <br> St. Paul's Hotel</p>
                   <p>
-                    <button class="btn btn-warning" data-toggle="modal" data-target="#BookingPaul">Book Now</button>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#objection">I Object</button>
                   </p>
                 </li>
               </ul>
@@ -279,139 +284,56 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
   </div>
-  </div>
+
 
 
   <!--Booking Modals-->
-
-  <div class="modal fade" id="BookingHilton" role="dialog">
+  <div class="modal fade" id="objection" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
+          <h3 class="modal-title text-center"><strong>Object current hotel choice</strong></h3>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
-              <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
-              <table class="table table-hover table-condensed">
-                <tr>
-                  <td width="40%"><strong>Hotel Name</strong></td>
-                  <td width="60%">Hilton Hotel London</td>
-                </tr>
-                <tr>
-                  <td><strong>Room Type</strong></td>
-                  <td>Deluxe Single</td>
-                </tr>
-                <tr>
-                  <td><strong>Amenities</strong></td>
-                  <td>Breakfast & WiFi included</td>
-                </tr>
-                <tr>
-                  <td><strong>Check-in Date</strong></td>
-                  <td>28 Feb 2016</td>
-                </tr>
-                <tr>
-                  <td><strong>Check-out Date</strong></td>
-                  <td>29 Feb 2016</td>
-                </tr>
-              </table>
+              <h4 class="text-center">Don't think the current hotel is suitable?</h4>
+              <br>
+              <form>
+                <fieldset class="form-group">
+                  <label for="reason">I don't like the current hotel because...</label>
+                  <input type="text" class="form-control" id="reason" placeholder="Reason for Objection">
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="alternative">I would rather...</label>
+                  <select class="form-control" id="alternative">
+                    <option>Hilton Hotel</option>
+                    <option>Hampshire Hotel</option>
+                    <option>St. Paul's</option>
+                  </select>
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="other">Other</label>
+                  <input type="text" class="form-control" id="other" placeholder="Suggest an Alternative">
+                </fieldset>
+
+
+                <small class="text-muted"><center>Your suggestion will be reviewed by the group leader for confirmation. You can also use the live chat to communicate your preferences.</center></small>
+              </form>
             </div>
-          </div>
-          <div class="row">
-            <form role="form">
-              <div class="form-group col-sm-8 col-sm-offset-2">
-                <h4 class="text-center"><strong>Step 2 </strong> Select Your Payment Method</h4>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optradio"><strong>Primary Credit Card </strong>
-                    <p class="text-muted">Registered to Jin Wei | Ending in 1403</p>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optradio"><strong>Paypal</strong>
-                    <p class="text-muted">Registered to jinwei@hotmail.com</p>
-                  </label>
-                </div>
-              </div>
-            </form>
-            <div class="col-sm-2"></div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
+          <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Raise Objection</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="BookingPaul" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-              <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
-              <table class="table table-hover table-condensed">
-                <tr>
-                  <td width="40%"><strong>Hotel Name</strong></td>
-                  <td width="60%">St. Paul's Hotel London</td>
-                </tr>
-                <tr>
-                  <td><strong>Room Type</strong></td>
-                  <td>Deluxe Single</td>
-                </tr>
-                <tr>
-                  <td><strong>Amenities</strong></td>
-                  <td>Breakfast included</td>
-                </tr>
-                <tr>
-                  <td><strong>Check-in Date</strong></td>
-                  <td>2 Mar 2016</td>
-                </tr>
-                <tr>
-                  <td><strong>Check-out Date</strong></td>
-                  <td>3 Mar 2016</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="row">
-            <form role="form">
-              <div class="form-group col-sm-8 col-sm-offset-2">
-                <h4 class="text-center"><strong>Step 2 </strong> Select Your Payment Method</h4>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optradio"><strong>Primary Credit Card </strong>
-                    <p class="text-muted">Registered to Jin Wei | Ending in 1403</p>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optradio"><strong>Paypal</strong>
-                    <p class="text-muted">Registered to jinwei@hotmail.com</p>
-                  </label>
-                </div>
-              </div>
-            </form>
-            <div class="col-sm-2"></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--End Booking Modals-->
+
+  <!--End Booking Modal-->
 
   <div id="chat_div"></div>
 
@@ -435,21 +357,16 @@
   <script>
     $(document).ready(
       function() {
-        alert("You have published your itinerary!");
-        $("#join-trip").replaceWith("<button class=\"btn btn-success btn-block disabled join\"> Joined </button> \
-                                     \
-                                     <a href=\"flights.html\" class=\"btn btn-warning btn-block join\"> Select Flights </button>");
-
         $("#chat_div").chatbox({
           id: "chat_div",
           title: "London 8D7N",
           user: "Rhynade",
           offset: "60px"
         });
+        
+        $("#chat_div").chatbox("option", "boxManager").addMsg("Jun Weng", "Hi guys! I think Hilton Hotel might be too far from Tower Bridge. I was thinking Hampshire for the first two days?");
 
-        // to insert a message
-        $("#chat_div").chatbox("option", "boxManager").addMsg("Velle", "Hi Rhynade, I see you've created a new trip. You can use this space to chat with other collaborators.");
-
+        $('[data-toggle="popover"]').popover();
       })
   </script>
 

@@ -29,7 +29,11 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="index.html">Velle</a>
       </div>
+
       <div class="nav navbar-nav navbar-right cty">
+        <span class="glyphicon glyphicon-user" style="color:white; padding-right:10px"></span>
+        <a href="profile2.html"><font color="white"> Jun Weng</font></a>
+        <span class="space"></span>
         <input id="country_selector" type="text">
       </div>
     </div>
@@ -640,6 +644,69 @@
     </div>
   </div>
 
+  <div class="modal fade" id="BookingHilton" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title text-center"><strong>One-Click Hotel Booking</strong></h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h4 class="text-center"><strong>Step 1 </strong> Confirm Booking Details</h4>
+              <table class="table table-hover table-condensed">
+                <tr>
+                  <td width="40%"><strong>Hotel Name</strong></td>
+                  <td width="60%">Hilton Hotel London</td>
+                </tr>
+                <tr>
+                  <td><strong>Room Type</strong></td>
+                  <td>Deluxe Single</td>
+                </tr>
+                <tr>
+                  <td><strong>Amenities</strong></td>
+                  <td>Breakfast & WiFi included</td>
+                </tr>
+                <tr>
+                  <td><strong>Check-in Date</strong></td>
+                  <td>28 Feb 2016</td>
+                </tr>
+                <tr>
+                  <td><strong>Check-out Date</strong></td>
+                  <td>29 Feb 2016</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <form role="form">
+              <div class="form-group col-sm-8 col-sm-offset-2">
+                <h4 class="text-center"><strong>Step 2 </strong> Select Your Payment Method</h4>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optradio"><strong>Primary Credit Card </strong>
+                    <p class="text-muted">Registered to Jin Wei | Ending in 1403</p>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optradio"><strong>Paypal</strong>
+                    <p class="text-muted">Registered to jinwei@hotmail.com</p>
+                  </label>
+                </div>
+              </div>
+            </form>
+            <div class="col-sm-2"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Confirm Booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--End Booking Modals-->
 
@@ -672,7 +739,7 @@
         offset: "60px"
       })
     })
-    
+
     $("#paid").on("click",
       function() {
         $("#MakePayment").modal("toggle");
